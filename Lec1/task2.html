@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200..700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <!-- CSS Styles -->
+  <link rel="stylesheet" href="css/task2.css">
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <h1 class="header__title">Nada Malash</h1>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- About & Technical Skills -->
+    <section class="profile">
+      <img class="profile__image" src="https://fakeimg.pl/600x600?text=Profile+Image&font_size=90" alt="Personal Image">
+      <div class="profile__content">
+        <h2 class="profile__title">About Me</h2>
+        <p class="profile__description">
+          Passionate software engineer specializing in frontend development with Angular. Skilled in creating dynamic,
+          user-friendly interfaces with a strong focus on performance and design.
+        </p>
+
+        <!-- Technical Skills -->
+        <div class="technical-skills">
+          <h3 class="technical-skills__title">Technical Skills</h3>
+          <div class="technical-skills__list">
+            <div class="technical-skills__item">
+              <label class="technical-skills__label">HTML</label>
+              <meter class="technical-skills__meter" value="90" min="0" max="100" optimum="100">90%</meter>
+            </div>
+
+            <div class="technical-skills__item">
+              <label class="technical-skills__label">CSS</label>
+              <meter class="technical-skills__meter" value="80" min="0" max="100" optimum="100">80%</meter>
+            </div>
+
+            <div class="technical-skills__item">
+              <label class="technical-skills__label">JavaScript</label>
+              <meter class="technical-skills__meter" value="50" min="0" max="100" optimum="100">50%</meter>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Soft Skills -->
+    <section class="soft-skills">
+      <h2 class="soft-skills__title">Soft Skills</h2>
+      <div class="soft-skills__container">
+
+        <div class="soft-skills__item">
+          <div class="soft-skills__circular-meter" data-percent="75">
+            <span class="soft-skills__percentage">75%</span>
+            <svg class="soft-skills__measurment" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="45"></circle>
+            </svg>
+          </div>
+          <div class="soft-skills__name">Communication</div>
+        </div>
+
+        <div class="soft-skills__item">
+          <div class="soft-skills__circular-meter" data-percent="50">
+            <span class="soft-skills__percentage">50%</span>
+            <svg class="soft-skills__measurment" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="45"></circle>
+            </svg>
+          </div>
+          <div class="soft-skills__name">Teamwork</div>
+        </div>
+
+        <div class="soft-skills__item">
+          <div class="soft-skills__circular-meter" data-percent="90">
+            <span class="soft-skills__percentage">90%</span>
+            <svg class="soft-skills__measurment" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="45"></circle>
+            </svg>
+          </div>
+          <div class="soft-skills__name">Leadership</div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Birthdate -->
+    <section class="birthdate">
+      <h2 class="birthdate__title">Birthdate</h2>
+      <time class="birthdate__date" datetime="1998-10-07">7 oct 1998</time>
+    </section>
+
+    <!-- Audio -->
+    <section class="audio">
+      <h2 class="audio__title">Listen Audio</h2>
+      <audio id="audio1">
+        <source src="assets/emotional-orchestra.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+      <div class="audio__container">
+        <button class="audio__button" onclick="startAudio()"><i class="fa-solid fa-play fa-xl"></i></button>
+        <button class="audio__button" onclick="stopAudio()"><i class="fa-solid fa-pause fa-xl"></i></button>
+      </div>
+    </section>
+
+
+    <!-- Video -->
+    <section class="video">
+      <h2 class="video__title">Watch Video</h2>
+      <video class="video__frame" width="400" height="400" controls>
+        <source src="assets/animation.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </section>
+
+    <!-- New Tags -->
+    <section class="tags">
+      <h2 class="tags__title">New Tags</h2>
+      <form>
+        <label class="tags__lable" for="browser">Choose a browser:</label>
+        <input class="tags__input" list="browsers" id="browser" name="browser">
+        <datalist id="browsers">
+            <option value="Chrome">
+            <option value="Firefox">
+            <option value="Edge">
+            <option value="Safari">
+            <option value="Opera">
+        </datalist>
+
+        <label class="tags__lable" for="upload">Upload an Image:</label>
+        <input class="tags__input" type="file" id="upload" name="upload" accept="image/*" onchange="previewImage(event)">
+
+        <details>
+            <summary class="tags__lable">More Information</summary>
+            <p>This is a sample form that demonstrates different HTML elements.</p>
+        </details>
+
+        <button class="tags__input" type="submit">Submit</button>
+    </form>
+    </section>
+
+    <script src="js/task2.js"></script>
+  </main>
+
+</body>
+
+</html>

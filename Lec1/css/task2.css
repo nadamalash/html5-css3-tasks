@@ -1,0 +1,377 @@
+/* General Styles */
+:root {
+  --orange-color: #fd6f00;
+  --gray-color: #edecec;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+body {
+  font-family: "Yanone Kaffeesatz", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+/* Header */
+.header {
+  color: var(--orange-color);
+  text-align: center;
+  padding: 3rem 0;
+  margin-top: 4rem;
+}
+
+.header__title {
+  font-size: 5rem;
+}
+
+/* Main Content */
+.main-content {
+  margin: 0 auto 2rem;
+  padding: 1.5rem;
+}
+
+/* Profile Section */
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.profile__content {
+  width: 765px;
+}
+
+.profile__image {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile__title {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.profile__description {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: gray;
+}
+
+/* Technical Skills */
+.technical-skills {
+  margin-top: 1rem;
+  width: 765px;
+}
+
+.technical-skills__title {
+  /*hidden for design but good for seo instead of display none*/
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.technical-skills__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.technical-skills__item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.technical-skills__label {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.technical-skills__meter {
+  width: 100%;
+  height: 12px;
+  border-radius: 6px;
+  background: var(--gray-color); /*Size and Gray Bg Color in Firefox*/
+}
+.technical-skills__meter::-moz-meter-bar {
+  /*Value Bar Color in Firefox*/
+  background: var(--orange-color);
+}
+.technical-skills__meter::-webkit-meter-bar {
+  /*Size and Gray Bg Color in Chrome*/
+  width: 100%;
+  height: 12px;
+  border-radius: 6px;
+  background: var(--gray-color);
+}
+.technical-skills__meter::-webkit-meter-optimum-value {
+  /*Value Bar Color in Chrome*/
+  background: var(--orange-color);
+}
+
+/* Soft Skills */
+.soft-skills {
+  text-align: center;
+  margin-bottom: 2rem;
+
+}
+
+.soft-skills__title {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.soft-skills__container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.soft-skills__item {
+  width: 100px;
+  aspect-ratio: 1;
+}
+
+.soft-skills__circular-meter {
+  width: 100%;
+  aspect-ratio: 1;
+  position: relative;
+  background-color: var(--gray-color);
+  border-radius: 50%;
+}
+
+.soft-skills__measurment {
+  position: absolute;
+  top: 0;
+  left: 0;
+  fill: none;
+  stroke: var(--orange-color);
+  stroke-width: 40px;
+  border-radius: 50%;
+  width: 100%;
+  transform: rotate(-90deg); /*start fill from the top*/
+  transform-origin: center;
+}
+
+.soft-skills__percentage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  font-size: 1.2rem;
+  font-weight: bold;
+  z-index: 1;
+  background-color: white;
+  width: 60px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.soft-skills__name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: black;
+  margin-top: 0.5rem;
+}
+
+/* Birthdate */
+.birthdate {
+  text-align: center;
+  margin: 4rem;
+}
+
+.birthdate__title {
+  font-size: 3rem;
+}
+
+.birthdate__date {
+  font-size: 4rem;
+  font-weight: bold;
+  color: var(--orange-color);
+  margin-top: 0.5rem;
+
+}
+
+/* Tags */
+.tags {
+  text-align: center;
+  margin: 4rem;
+}
+
+.tags__title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.tags__lable {
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: block;
+  margin-top: 1rem;
+}
+
+.tags__input {
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  border: 2px solid var(--gray-color);
+  border-radius: 5px;
+  margin-top: 0.5rem;
+  width: 100%;
+  max-width: 300px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tags__input[type="file"] {
+  border: none;
+}
+
+.tags__input:focus {
+  outline: none;
+  border-color: var(--orange-color);
+}
+
+details {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button.tags__input {
+  background-color: var(--orange-color);
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  padding: 0.7rem 1.5rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button.tags__input:hover {
+  background-color: darkorange;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Audio */
+.audio {
+  text-align: center;
+  margin: 4rem;
+}
+
+.audio__title {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.audio__container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.audio__button {
+  width: 50px;
+  aspect-ratio: 1;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--orange-color);
+  color: black;
+  cursor: pointer; 
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Audio */
+.audio {
+  text-align: center;
+  margin: 4rem;
+}
+
+.audio__title {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.audio__container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.audio__button {
+  width: 50px;
+  aspect-ratio: 1;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--orange-color);
+  color: black;
+  cursor: pointer; 
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Video */
+.video {
+  text-align: center;
+  margin: 4rem;
+}
+
+.video__title {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.video__frame {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .profile {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile__image {
+    width: 300px;
+    height: 300px;
+  }
+
+  .profile__content {
+    width: 400px;
+  }
+
+  .technical-skills {
+    width: 400px;
+  }
+  .soft-skills__container {
+    gap: 1.5rem;
+  }
+}
